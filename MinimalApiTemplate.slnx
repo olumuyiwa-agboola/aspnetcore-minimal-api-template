@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/MinimalApiTemplate.API/MinimalApiTemplate.API.csproj" Id="d3c6a2c4-2b7c-43b0-bc94-891d638cf0b0" />
+  <Project Path="src/MinimalApiTemplate.Core/MinimalApiTemplate.Core.csproj" Id="b3eac84b-0af9-4e73-95e6-9c1e1be828f2" />
+  <Project Path="src/MinimalApiTemplate.Infrastructure/MinimalApiTemplate.Infrastructure.csproj" Id="b39cac87-3615-403a-bc4d-2f6e3d40731d" />
+</Solution>
