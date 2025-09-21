@@ -1,8 +1,8 @@
 ﻿namespace MinimalApiTemplate.API.Configurations
 {
-    public static class MiddlewarePipelineConfigurator
+    public static class RequestPipelineConfigurator
     {
-        public static WebApplication ConfigureMiddlewarePipeline(this WebApplication app)
+        public static WebApplication ConfigureRequestPipeline(this WebApplication app)
         {
             app.MapGet("/", () => "Hello World!");
 

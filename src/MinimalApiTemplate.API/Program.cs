@@ -2,8 +2,8 @@ using MinimalApiTemplate.API.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.ConfigureBuilder()
+var app = builder.ConfigureWebApplicationBuilder()
             .Build();
 
-app.ConfigureMiddlewarePipeline()
+app.ConfigureRequestPipeline()
     .Run();

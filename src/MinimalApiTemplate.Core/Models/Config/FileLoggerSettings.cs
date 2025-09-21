@@ -3,14 +3,14 @@ using MinimalApiTemplate.Core.Constants;
 
 namespace MinimalApiTemplate.Core.Models.Config
 {
-    public class LoggerSettings
+    public class FileLoggerSettings
     {
-        public string? FilePath { get; set; }
+        public string FilePath { get; set; } = string.Empty;
     }
 
-    public class LoggerSettingsValidator : AbstractValidator<LoggerSettings>
+    public class FileLoggerSettingsValidator : AbstractValidator<FileLoggerSettings>
     {
-        public LoggerSettingsValidator()
+        public FileLoggerSettingsValidator()
         {
             RuleFor(model => model.FilePath)
                 .IsRequired();
