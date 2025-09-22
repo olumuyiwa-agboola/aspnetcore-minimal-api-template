@@ -41,7 +41,7 @@ namespace MinimalApiTemplate.API.Configurations
             return builder;
         }
 
-        public static void ConfigureApiDocumentation(this WebApplicationBuilder builder)
+        private static void ConfigureApiDocumentation(this WebApplicationBuilder builder)
         {
 
         }
@@ -51,12 +51,12 @@ namespace MinimalApiTemplate.API.Configurations
 
         }
 
-        public static void ConfigureCaching(this WebApplicationBuilder builder)
+        private static void ConfigureCaching(this WebApplicationBuilder builder)
         {
 
         }
 
-        public static void ConfigureCors(this WebApplicationBuilder builder)
+        private static void ConfigureCors(this WebApplicationBuilder builder)
         {
             builder.Services.AddCors(options =>
             {
@@ -69,12 +69,12 @@ namespace MinimalApiTemplate.API.Configurations
             });
         }
 
-        public static void ConfigureHelpers(this WebApplicationBuilder builder)
+        private static void ConfigureHelpers(this WebApplicationBuilder builder)
         {
 
         }
 
-        public static void ConfigureHostBuilder(this WebApplicationBuilder builder)
+        private static void ConfigureHostBuilder(this WebApplicationBuilder builder)
         {
             builder.Host.UseDefaultServiceProvider(options =>
             {
@@ -82,17 +82,17 @@ namespace MinimalApiTemplate.API.Configurations
             });
         }
 
-        public static void ConfigureHttpClients(this WebApplicationBuilder builder)
+        private static void ConfigureHttpClients(this WebApplicationBuilder builder)
         {
 
         }
 
-        public static void ConfigureHttpContextAccessor(this WebApplicationBuilder builder)
+        private static void ConfigureHttpContextAccessor(this WebApplicationBuilder builder)
         {
             builder.Services.AddHttpContextAccessor();
         }
 
-        public static void ConfigureLogger(this WebApplicationBuilder builder)
+        private static void ConfigureLogger(this WebApplicationBuilder builder)
         {
             FileLoggerSettings fileLoggingSettings = builder.Configuration.GetSection(nameof(FileLoggerSettings)).Get<FileLoggerSettings>()!;
 
@@ -111,12 +111,12 @@ namespace MinimalApiTemplate.API.Configurations
             builder.Services.AddSerilog();
         }
 
-        public static void ConfigureRepositories(this WebApplicationBuilder builder)
+        private static void ConfigureRepositories(this WebApplicationBuilder builder)
         {
 
         }
 
-        public static void ConfigureRoutingAndEndpoints(this WebApplicationBuilder builder)
+        private static void ConfigureRoutingAndEndpoints(this WebApplicationBuilder builder)
         {
             builder.Services.AddRouting(options =>
             {
@@ -126,17 +126,17 @@ namespace MinimalApiTemplate.API.Configurations
             });
         }
 
-        public static void ConfigureServicesAndHandlers(this WebApplicationBuilder builder)
+        private static void ConfigureServicesAndHandlers(this WebApplicationBuilder builder)
         {
 
         }
 
-        public static void ConfigureWebHostBuilder(this WebApplicationBuilder builder)
+        private static void ConfigureWebHostBuilder(this WebApplicationBuilder builder)
         {
             builder.WebHost.ConfigureKestrel(options => options.AddServerHeader = false);
         }
 
-        public static void ConfigureApplicationOptions(this WebApplicationBuilder builder)
+        private static void ConfigureApplicationOptions(this WebApplicationBuilder builder)
         {
             builder.Services.AddOptionsWithFluentValidation<FileLoggerSettings, FileLoggerSettingsValidator>(nameof(FileLoggerSettings));
         }
